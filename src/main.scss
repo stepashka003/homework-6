@@ -45,11 +45,11 @@ body {
         --offset: 20px; 
         --padding-block-min: 40px;
         --column-header-nav: 6/14;
-        --column-hero-section-wrapper: 2/11;
+        --column-hero-container-wrapper: 2/11;
         --column-footer-info: 8/14;
         
-        --_height-section-logo-content-img: 200px;
-        --_width-section-logo-content-img: 450px;
+        --_height-container-logo-content-img: 200px;
+        --_width-container-logo-content-img: 450px;
 
     }
 
@@ -59,19 +59,19 @@ body {
         --justify-content-header-logo: center;
         --column-header-nav: 2/14;
 
-        --column-hero-section-wrapper: 2/10;
+        --column-hero-container-wrapper: 2/10;
         --col-img: 2/14;
         --col-text: 2/14;
         --col-img-right: 2/14;
         --col-text-right: 2/14;
-        --_height-section-descr-content-img: 250px;
+        --_height-container-descr-content-img: 250px;
 
-        --row-gap-section-list-content: 40px;
-        --_grid-column-section-list-content-item-img: 12;
-        --_grid-column-section-list-content-item: 12;
+        --row-gap-container-list-content: 40px;
+        --_grid-column-container-list-content-item-img: 12;
+        --_grid-column-container-list-content-item: 12;
 
-        --_height-section-logo-content-img: 150px;
-        --_width-section-logo-content-img: 300px;
+        --_height-container-logo-content-img: 150px;
+        --_width-container-logo-content-img: 300px;
 
         --column-footer-info: 7/14;
 
@@ -143,14 +143,14 @@ body {
     }
 }
 
-.section {
+.container {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 1/-1;
 }
 
 
-.hero-section {
+.hero-container {
     --column: 2/-2;
     height: 100dvh; 
     background: url('img/hero_img.png');
@@ -160,7 +160,7 @@ body {
     &__wrapper {
         height: calc(100dvh - 100px);
         grid-template-columns: subgrid;
-        grid-column: var(--column-hero-section-wrapper, 2/8);
+        grid-column: var(--column-hero-container-wrapper, 2/8);
         margin-top: 100px;
         display: flex;
         flex-direction: column;
@@ -208,8 +208,8 @@ body {
     }
 }
 
-.section-descr {
-    --height-section-descr-content-img: var(--_height-section-descr-content-img, 100%);
+.container-descr {
+    --height-container-descr-content-img: var(--_height-container-descr-content-img, 100%);
     --column: 2/-2;
     background-color: var(--md-sys-color-surface);
 
@@ -230,7 +230,7 @@ body {
 
             grid-row: 1/2;
             width: 100%;
-            height: var(--height-section-descr-content-img);
+            height: var(--height-container-descr-content-img);
             border-radius: 16px;
             background-size: cover;
             background-position: center;
@@ -259,37 +259,37 @@ body {
     }
 
     &--img-1 {
-        .section-descr__content__img {
+        .container-descr__content__img {
             background-image: url(img/img_1.png);
         }
     }
 
     &--img-2 {
-        .section-descr__content__img {
+        .container-descr__content__img {
             background-image: url(img/img_2.png);
         }
     }
 
     &--img-3 {
-        .section-descr__content__img {
+        .container-descr__content__img {
             background-image: url(img/img_3.png);
         }
     }
 
     &--img-4 {
-        .section-descr__content__img {
+        .container-descr__content__img {
             background-image: url(img/img_4.png);
         }
     }
 
     &--img-6 {
-        .section-descr__content__img {
+        .container-descr__content__img {
             background-image: url(img/img_6.png);
         }
     }
 }
 
-.section-center {
+.container-center {
     padding-block: calc(74px - var(--padding-block-min));
     width: 100%;
     background: var(--md-sys-color-inverse-surface);
@@ -340,7 +340,7 @@ body {
     }
 }
 
-.section-right-text {
+.container-right-text {
     display: grid;
     grid-column: 1/-1;
     width: 100%;
@@ -361,7 +361,7 @@ body {
     }
 }
 
-.section-list {
+.container-list {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 1/-1;
@@ -374,16 +374,16 @@ body {
         grid-template-columns: subgrid;
         grid-column: 2/-2;
         grid-auto-flow: row dense;
-        row-gap: var(--row-gap-section-list-content, 50px);
+        row-gap: var(--row-gap-container-list-content, 50px);
 
         &__item-card {
             display: grid;
             grid-template-columns: subgrid;
-            grid-column: span var(--_grid-column-section-list-content-item, 6);
+            grid-column: span var(--_grid-column-container-list-content-item, 6);
             height: 250px;
 
             &__img {
-                grid-column: span var(--_grid-column-section-list-content-item-img, 5);
+                grid-column: span var(--_grid-column-container-list-content-item-img, 5);
                 border-radius: 16px;
                 background-image: url(img/img_5.png);
                 background-size: cover;
@@ -394,13 +394,13 @@ body {
         }
 
         &__item {
-            grid-column: span var(--_grid-column-section-list-content-item, 6);
+            grid-column: span var(--_grid-column-container-list-content-item, 6);
             color: #006399;
         }
     }
 }
 
-.section-future {
+.container-future {
     display: grid;
     justify-content: space-between;
     align-items: center;
@@ -463,7 +463,7 @@ body {
 }
 
 
-.section-part {
+.container-part {
     grid-column: 1/-1;
         background-color: var(--md-sys-color-inverse-surface);
 
@@ -503,10 +503,10 @@ body {
 
 }
 
-.section-logo {
+.container-logo {
 
-    --height-section-logo-content-img: var(--_height-section-logo-content-img, 270px);
-    --width-section-logo-content-img: var(--_width-section-logo-content-img, 400px);
+    --height-container-logo-content-img: var(--_height-container-logo-content-img, 270px);
+    --width-container-logo-content-img: var(--_width-container-logo-content-img, 400px);
 
     grid-column: 1/-1;
     width: 100%;
@@ -520,8 +520,8 @@ body {
         align-items: center;
         cursor: pointer;
         margin-block: calc(93px - var(--padding-block-min));
-        height: var(--height-section-logo-content-img);
-        width: var(--width-section-logo-content-img);
+        height: var(--height-container-logo-content-img);
+        width: var(--width-container-logo-content-img);
         background: var(--md-sys-color-primary);
         mask-image: url(icons/WY\ Logo\ Full.svg);
         background-size: contain;
